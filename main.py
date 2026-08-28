@@ -7,7 +7,7 @@ app = FastAPI()
 @app.post("/generate")
 async def generate_image(file: UploadFile = File(...)):
     # ★ここに使いたいモデル名を入れる（重要）
-    api_url = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2"
+    api_url = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-3.5-medium"
 
     headers = {"Authorization": f"Bearer {os.getenv('HUGGINGFACE_API_KEY')}"}
 
